@@ -1,3 +1,5 @@
+
+
 const prompt = require("prompt-sync")();
 
 const ROWS = 3;
@@ -55,13 +57,15 @@ const getBet = (balance, lines) => {
 
 const spin = () => {
     const symbols = [];
+    console.log("🚀 ~ file: project.js:60 ~ spin ~ symbols:", symbols)
     for (const [symbol, count] of Object.entries(SYMBOLS_COUNT)) {
         for (let i = 0; i < count; i++) {
             symbols.push(symbol)
         }
     }
+    
 }
-
+spin();
 const reels = [];
 for (let i = 0; i < COLS; i++) {
     reels.push([])
